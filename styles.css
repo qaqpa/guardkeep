@@ -171,3 +171,11 @@ h2 { font-size: clamp(28px, 3.2vw, 40px); font-weight: 800; letter-spacing: -0.0
   .hero { padding: 48px 0; }
 }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+
+/* demo video */
+.video-sec { background: #05041A; color: #fff; }
+.video-sec h2 { color: #fff; }
+.video-sec .head p { color: rgba(255,255,255,.72); }
+.head.center { text-align: center; margin-left: auto; margin-right: auto; }
+.video-frame { border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,.14); box-shadow: 0 40px 100px rgba(0,0,0,.5), 0 0 0 8px rgba(91,77,255,.12); background: #000; }
+.video-frame video { width: 100%; height: auto; display: block; }
