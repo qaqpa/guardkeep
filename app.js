@@ -26,6 +26,11 @@
       document.getElementById("perf-meta").textContent =
         "Measured on " + p.machine.cpu + ", " + p.machine.ram_gb + " GB RAM, " + p.machine.os + ", " + p.mode + " mode, " +
         p.measured_at + ". Engines not active in this run: " + p.inactive.join(", ") + ".";
+      // hero key facts carry data-perf attributes: keep them in sync with the measurements
+      document.querySelectorAll("[data-perf]").forEach(function (node) {
+        var v = p[node.getAttribute("data-perf")];
+        if (typeof v === "number") node.textContent = node.getAttribute("data-perf") === "tests" ? String(v) : fmt(v);
+      });
       var box = document.getElementById("perf-tiles");
       box.appendChild(tile(fmt(p.cascade_ms), "ms", "full cascade per file, median of " + p.files + " Windows programs"));
       box.appendChild(tile(fmt(p.warm_ms), "ms", "repeat scan of the same file via the hash cache"));
