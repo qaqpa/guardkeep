@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="GuardKeep AI">
+  <!-- GuardKeep mark: a shield whose inner line is the letter G (the cross-bar points inward = "keeps guard"). -->
+  <defs>
+    <linearGradient id="gk-g" x1="10" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2B1DD3"/>
+      <stop offset="0.55" stop-color="#3C7FED"/>
+      <stop offset="1" stop-color="#2FB6FF"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 3.5 55 11.6v17.6c0 14.6-9.7 26.4-23 31.3C18.7 55.6 9 43.8 9 29.2V11.6z" fill="url(#gk-g)"/>
+  <path d="M41.6 22.4A12.2 12.2 0 1 0 44.2 33H33.4" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

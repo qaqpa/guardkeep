@@ -1,0 +1,22 @@
+{
+  "measured_at": "21 Nov 2026",
+  "machine": {
+    "cpu": "Intel Celeron N5095",
+    "ram_gb": 16,
+    "os": "Windows 11"
+  },
+  "mode": "Lite",
+  "inactive": [
+    "our ML model (PE)",
+    "VirusTotal",
+    "MetaDefender",
+    "ClamAV"
+  ],
+  "files": 10,
+  "cascade_ms": 145.69,
+  "warm_ms": 3.74,
+  "link_ms": 2.84,
+  "idle_mb": 90.8,
+  "idle_cpu": 0.4,
+  "tests": 415
+}

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GuardKeep AI — privacy-first AI security agent for Windows</title>
+  <meta name="description" content="GuardKeep AI unites antivirus engines, two machine-learning detectors and a trilingual assistant in one local security agent for Windows. KIMEP AI Challenge 2026 project.">
+  <meta property="og:title" content="GuardKeep AI">
+  <meta property="og:description" content="Antivirus is the shield. GuardKeep is the warrior.">
+  <meta name="theme-color" content="#2B1DD3">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-in">
+      <a class="brand" href="#top" aria-label="GuardKeep AI home"><img src="assets/logo.svg" alt="" width="32" height="32"><span>GuardKeep <em>AI</em></span></a>
+      <nav aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#how">How it works</a>
+        <a href="#results">Results</a>
+        <a href="#demo">Demo</a>
+        <a href="#team">Team</a>
+      </nav>
+      <span class="chip">KIMEP AI Challenge 2026</span>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-in">
+        <div class="hero-copy">
+          <span class="eyebrow">Track: AI in Cybersecurity &amp; Digital Safety</span>
+          <h1>Antivirus is the shield.<br><span class="grad">GuardKeep is the warrior.</span></h1>
+          <p class="lead">A privacy-first AI security agent for Windows. It unites Windows Defender, YARA, cloud reputation and our own machine-learning detectors in one fast cascade, and explains every verdict in Kazakh, Russian or English.</p>
+          <div class="cta">
+            <a class="btn primary" href="#how">How it works</a>
+            <a class="btn" href="#results">See the results</a>
+          </div>
+          <ul class="facts">
+            <li><b>Local-first</b> files and passwords never leave the PC</li>
+            <li><b>Built for Kazakhstan</b> 44 local brands, kk / ru / en</li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <div class="frame">
+            <div class="bar"><i></i><i></i><i></i><span>GuardKeep AI · dashboard</span></div>
+            <img src="assets/app-dark.png" alt="GuardKeep AI dashboard: computer is protected, scan statistics and quick actions" width="1440" height="650">
+          </div>
+          <figcaption>Real interface of the working prototype (Russian UI shown).</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ABOUT / PROBLEM -->
+    <section id="about" class="section">
+      <div class="wrap">
+        <div class="head">
+          <span class="kicker">The problem</span>
+          <h2>Online fraud keeps growing, and protection is scattered</h2>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="n">27,892</div><p>internet-fraud cases recorded in Kazakhstan in 2025 <a href="#r11">[11]</a></p></div>
+          <div class="stat"><div class="n">+25%</div><p>online fraud growth in the first half of 2025: 9,936 → 12,390 cases <a href="#r12">[12]</a></p></div>
+        </div>
+        <div class="grid3">
+          <div class="card"><h3>Scattered tools</h3><p>Antivirus, link checkers and password checkers are separate apps that ordinary users never combine.</p></div>
+          <div class="card"><h3>Privacy gap</h3><p>Cloud scanners see your files, so many people never check private documents at all.</p></div>
+          <div class="card"><h3>Local scams</h3><p>Fake Kaspi, Halyk and eGov pages written in Kazakh and Russian slip past generic filters.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="section alt">
+      <div class="wrap">
+        <div class="head">
+          <span class="kicker">How it works</span>
+          <h2>One core, two cascades, many clients</h2>
+          <p>GuardKeep does not replace antivirus: it makes existing engines and our own models work as one team, from the fastest check to the slowest.</p>
+        </div>
+        <div class="arch">
+          <div class="lane">
+            <div class="lane-h">Files <small>fast → slow</small></div>
+            <ol class="steps">
+              <li>SHA-256 verdict cache</li>
+              <li>YARA rules</li>
+              <li>Windows Defender</li>
+              <li class="ours">Our ML model (.exe / .dll)</li>
+              <li>Office / PDF heuristics</li>
+              <li class="opt">Cloud by hash (opt-in)</li>
+              <li class="opt">ClamAV (on demand)</li>
+            </ol>
+          </div>
+          <div class="core">
+            <img src="assets/logo.svg" alt="" width="64" height="64">
+            <b>GuardKeep Core</b>
+            <span>Verdict fusion: noisy-OR of engine risks, early exit, terminal hits decide at once</span>
+            <div class="verdicts"><i class="ok">safe</i><i class="warn">suspicious</i><i class="bad">malicious</i></div>
+            <span class="muted">+ confidence + plain-language reasons</span>
+          </div>
+          <div class="lane">
+            <div class="lane-h">Links &amp; messages</div>
+            <ol class="steps">
+              <li>Blacklists (URLhaus, OpenPhish, PhishTank)</li>
+              <li class="ours">Our URL model (KZ brand look-alikes)</li>
+              <li class="ours">Our text model (kk / ru / en)</li>
+            </ol>
+            <div class="lane-h clients">Clients <small>via API &amp; MCP</small></div>
+            <div class="tags"><span>Web app</span><span>Guardy</span><span>Telegram bot</span><span>CLI</span><span>Any MCP client</span></div>
+          </div>
+        </div>
+        <p class="legend"><i class="sw ours"></i>our models <i class="sw opt"></i>optional / on demand</p>
+
+        <div class="grid3 models">
+          <div class="card">
+            <h3>Malware model</h3>
+            <p>Trained on the <b>EMBER2024</b> benchmark <a href="#r1">[1]</a>: 2,568 static features of Win32, Win64 and .NET files with a temporal train/test split. <b>LightGBM</b> <a href="#r2">[2]</a> is compared with XGBoost <a href="#r3">[3]</a>; thresholds are set at 1% and 0.1% false-positive rate; <b>TreeSHAP</b> <a href="#r4">[4]</a> shows which features drove each verdict.</p>
+          </div>
+          <div class="card">
+            <h3>Phishing &amp; scam model</h3>
+            <p><b>32 URL features</b>: edit distance to 44 Kazakh brands (Kaspi, Halyk, eGov …), homoglyphs and punycode, risky domain zones, domain age. Messages in Kazakh, Russian and mixed language: TF-IDF + logistic regression, then <b>XLM-R</b> <a href="#r5">[5]</a> fine-tuning.</p>
+          </div>
+          <div class="card">
+            <h3>Guardy assistant</h3>
+            <p>A cloud LLM through an OpenAI-compatible API, with fallback to a <b>local model</b> (llama.cpp). Guardy acts only through vetted tools; deleting or restoring a file always needs a user click. The LLM receives only the question and short verdicts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section">
+      <div class="wrap">
+        <div class="head">
+          <span class="kicker">Features</span>
+          <h2>Everything a family needs, in one place</h2>
+        </div>
+        <div class="grid4">
+          <div class="feat"><h4>Downloads guard</h4><p>New downloads are scanned automatically; dangerous files go to a restorable quarantine.</p></div>
+          <div class="feat"><h4>Link, message &amp; QR check</h4><p>Paste a message, a link or scan a QR code: Guardy says if it is a scam and why.</p></div>
+          <div class="feat"><h4>Password check</h4><p>Strength with zxcvbn <a href="#r7">[7]</a>, leaks via k-anonymity: only 5 hash characters are sent <a href="#r8">[8]</a>.</p></div>
+          <div class="feat"><h4>PC security score</h4><p>Defender, firewall, updates, BitLocker, autostart, passwords: 0–100 with a fix for each item.</p></div>
+          <div class="feat"><h4>Parental control</h4><p>PIN lock enforced by the server, clipboard link guard, screen-time limit, Telegram alerts.</p></div>
+          <div class="feat"><h4>Mail protection</h4><p>Opt-in IMAP check: links, attachments, look-alike senders, SPF / DKIM / DMARC.</p></div>
+          <div class="feat"><h4>Open core (MCP)</h4><p>24 tools exposed through the Model Context Protocol <a href="#r6">[6]</a>: any AI assistant can use them.</p></div>
+          <div class="feat"><h4>Works offline</h4><p>Without internet all protection keeps working; only the cloud chat pauses.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section id="results" class="section alt">
+      <div class="wrap">
+        <div class="head">
+          <span class="kicker">Results</span>
+          <h2>Measured, not promised</h2>
+          <p>Every number here comes from a real run. Hardware and settings are listed next to each result.</p>
+        </div>
+
+        <h3 class="sub">Performance on a budget laptop</h3>
+        <p class="meta" id="perf-meta">Loading measurements…</p>
+        <div class="tiles" id="perf-tiles"></div>
+
+        <h3 class="sub">Model metrics</h3>
+        <div class="status" id="metrics-status"></div>
+        <div class="mtable" id="metrics"></div>
+
+        <div class="refbox">
+          <span class="refk">Published reference <a href="#r1">[1]</a></span>
+          <div><b>ROC-AUC 0.9949</b> · <b>TPR 94.5% at 1% FPR</b></div>
+          <p>The EMBER2024 authors' LightGBM baseline: the benchmark our training pipeline reproduces on the same feature set. This is not our result; it shows what the model class achieves.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEMO -->
+    <section id="demo" class="section">
+      <div class="wrap">
+        <div class="head">
+          <span class="kicker">Live demo</span>
+          <h2>What you will see at our table, in 60 seconds</h2>
+        </div>
+        <ol class="demo">
+          <li><b>Fake Kaspi QR</b><span>Scan a QR code with a look-alike Kaspi link: GuardKeep blocks it and Guardy explains the trick.</span></li>
+          <li><b>Test virus (EICAR)</b><span>Download the harmless EICAR test file: a Windows alert, and the file goes to quarantine.</span></li>
+          <li><b>“Why is it dangerous?”</b><span>Ask Guardy: it answers in plain words, in Kazakh, Russian or English.</span></li>
+          <li><b>PC security score</b><span>A 0–100 score with a concrete fix for every weak point, plus parental control.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="section alt">
+      <div class="wrap team">
+        <div>
+          <span class="kicker">Team</span>
+          <h2>Built by students from Almaty</h2>
+          <p class="lead small">Secondary School No. 224, Almaty, Kazakhstan · Independent student research project</p>
+        </div>
+        <div class="people">
+          <div class="person"><span class="avatar">AY</span><b>Aliyev Yerbol</b></div>
+          <div class="person"><span class="avatar">TN</span><b>Turuyayev Nurlan</b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFERENCES -->
+    <section class="section refs">
+      <div class="wrap">
+        <h2>References</h2>
+        <ol>
+          <li id="r1">Joyce R. J. et al. EMBER2024: A Benchmark Dataset for Holistic Evaluation of Malware Classifiers. KDD 2025. <a href="https://arxiv.org/abs/2506.05074">arXiv:2506.05074</a></li>
+          <li id="r2">Ke G. et al. LightGBM: A Highly Efficient Gradient Boosting Decision Tree. NeurIPS 2017.</li>
+          <li id="r3">Chen T., Guestrin C. XGBoost: A Scalable Tree Boosting System. KDD 2016.</li>
+          <li id="r4">Lundberg S. M. et al. From local explanations to global understanding with explainable AI for trees. Nature Machine Intelligence, 2020.</li>
+          <li id="r5">Conneau A. et al. Unsupervised Cross-lingual Representation Learning at Scale (XLM-R). ACL 2020.</li>
+          <li id="r6">Model Context Protocol specification. <a href="https://modelcontextprotocol.io">modelcontextprotocol.io</a></li>
+          <li id="r7">Wheeler D. L. zxcvbn: Low-Budget Password Strength Estimation. USENIX Security 2016.</li>
+          <li id="r8">Have I Been Pwned: Pwned Passwords API (k-anonymity range search). <a href="https://haveibeenpwned.com/API/v3">haveibeenpwned.com/API/v3</a></li>
+          <li id="r9">ReversingLabs YARA rules, MIT licence. <a href="https://github.com/reversinglabs/reversinglabs-yara-rules">github.com/reversinglabs/reversinglabs-yara-rules</a></li>
+          <li id="r10">Phishing and malware URL feeds: abuse.ch URLhaus, OpenPhish, PhishTank.</li>
+          <li id="r11">Prime Minister of the Republic of Kazakhstan, official site. Cyber Fraud in Kazakhstan Reduced by 40%, 5.9 Billion Tenge Restored to Victims. 12 Oct 2026. <a href="https://primeminister.kz/en/news/reviews/law-and-order-and-constitutional-protection-of-citizens-digital-rights-cyber-fraud-in-kazakhstan-reduced-by-40-kzt59-billion-restored-to-victimsitizens-digital-rights-cyber-fraud-in-kazakhstan-reduced-by-40-59-billion-tenge-restored-to-victims-31984">primeminister.kz</a></li>
+          <li id="r12">Sakenova S. Online Fraud Surges Despite Overall Decline in Cases. The Astana Times, 21 Jul 2025. <a href="https://astanatimes.com/2025/07/online-fraud-surges-despite-overall-decline-in-cases/">astanatimes.com</a></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <span class="brand small"><img src="assets/logo.svg" alt="" width="22" height="22"> GuardKeep AI</span>
+      <span>KIMEP AI Challenge 2026 · Aliyev Yerbol, Turuyayev Nurlan</span>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

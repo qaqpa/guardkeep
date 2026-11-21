@@ -1,0 +1,37 @@
+{
+  "status": "pending",
+  "updated": "2026-11-21",
+  "note": "The final training run (150,000 EMBER2024 files, temporal test set of 50,000) is in progress. Model metrics appear here as soon as it finishes; nothing is estimated in advance.",
+  "groups": [
+    {
+      "title": "Malware detector (.exe / .dll)",
+      "dataset": "EMBER2024, Win32 + Win64 + .NET, temporal split",
+      "rows": [
+        { "label": "ROC-AUC, LightGBM", "value": null },
+        { "label": "TPR at 1% FPR, LightGBM", "value": null },
+        { "label": "TPR at 0.1% FPR, LightGBM", "value": null },
+        { "label": "ROC-AUC, XGBoost (comparison)", "value": null },
+        { "label": "Model time per file, CPU", "value": null }
+      ]
+    },
+    {
+      "title": "Phishing & scam detector",
+      "dataset": "Public phishing URL feeds + our Kazakh / Russian message set",
+      "rows": [
+        { "label": "URL model F1 (LightGBM)", "value": null },
+        { "label": "URL model F1, baseline (logistic regression)", "value": null },
+        { "label": "Message model F1 (TF-IDF + LR)", "value": null },
+        { "label": "Message model F1 (XLM-R)", "value": null }
+      ]
+    },
+    {
+      "title": "Guardy assistant",
+      "dataset": "25 test requests in Kazakh, Russian and English",
+      "rows": [
+        { "label": "Correct tool chosen", "value": null },
+        { "label": "Average cost per request", "value": null },
+        { "label": "Time to first answer", "value": null }
+      ]
+    }
+  ]
+}
