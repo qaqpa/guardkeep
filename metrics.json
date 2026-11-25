@@ -1,36 +1,76 @@
 {
   "status": "pending",
-  "updated": "2026-11-21",
-  "note": "The final training run (150,000 EMBER2024 files, temporal test set of 50,000) is in progress. Model metrics appear here as soon as it finishes; nothing is estimated in advance.",
+  "updated": "2026-11-25",
+  "note": "Malware detector: final results of the Google Colab run (version pe-lgbm-20261125-1615). Phishing and assistant metrics are still pending; nothing is estimated in advance.",
   "groups": [
     {
       "title": "Malware detector (.exe / .dll)",
-      "dataset": "EMBER2024, Win32 + Win64 + .NET, temporal split",
+      "dataset": "EMBER2024, Win32 + Win64 + .NET, temporal split; thresholds chosen on validation, not on test",
       "rows": [
-        { "label": "ROC-AUC, LightGBM", "value": null },
-        { "label": "TPR at 1% FPR, LightGBM", "value": null },
-        { "label": "TPR at 0.1% FPR, LightGBM", "value": null },
-        { "label": "ROC-AUC, XGBoost (comparison)", "value": null },
-        { "label": "Model time per file, CPU", "value": null }
+        {
+          "label": "ROC-AUC, LightGBM",
+          "value": "0.9965"
+        },
+        {
+          "label": "TPR at 1% FPR threshold, LightGBM",
+          "value": "95.0% (actual FPR 1.54%)"
+        },
+        {
+          "label": "TPR at 0.1% FPR threshold, LightGBM",
+          "value": "89.0% (actual FPR 0.19%)"
+        },
+        {
+          "label": "ROC-AUC, XGBoost (comparison)",
+          "value": "0.9965"
+        },
+        {
+          "label": "Model time per file, LightGBM / XGBoost",
+          "value": "0.41 ms / 7.4 ms (cloud CPU, model only)"
+        },
+        {
+          "label": "Training / test files",
+          "value": "158,500 / 53,500 (random subsample of EMBER2024; test = newer files)"
+        }
       ]
     },
     {
       "title": "Phishing & scam detector",
       "dataset": "Public phishing URL feeds + our Kazakh / Russian message set",
       "rows": [
-        { "label": "URL model F1 (LightGBM)", "value": null },
-        { "label": "URL model F1, baseline (logistic regression)", "value": null },
-        { "label": "Message model F1 (TF-IDF + LR)", "value": null },
-        { "label": "Message model F1 (XLM-R)", "value": null }
+        {
+          "label": "URL model F1 (LightGBM)",
+          "value": null
+        },
+        {
+          "label": "URL model F1, baseline (logistic regression)",
+          "value": null
+        },
+        {
+          "label": "Message model F1 (TF-IDF + LR)",
+          "value": null
+        },
+        {
+          "label": "Message model F1 (XLM-R)",
+          "value": null
+        }
       ]
     },
     {
       "title": "Guardy assistant",
       "dataset": "25 test requests in Kazakh, Russian and English",
       "rows": [
-        { "label": "Correct tool chosen", "value": null },
-        { "label": "Average cost per request", "value": null },
-        { "label": "Time to first answer", "value": null }
+        {
+          "label": "Correct tool chosen",
+          "value": null
+        },
+        {
+          "label": "Average cost per request",
+          "value": null
+        },
+        {
+          "label": "Time to first answer",
+          "value": null
+        }
       ]
     }
   ]
